@@ -15,10 +15,6 @@ local Frame = GuiFolder.ProHub.HUB.GameSriptsFrame
 local Background = Color3.new(0.20, 0.20, 0.20)
 local DarkBackground = Color3.new(0.15, 0.15, 0.15)
 local White = Color3.new(1, 1, 1)
---Delete old buttons
-for a, b in pairs(Frame:GetChildren()) do
-	b:Destroy()
-end
 --Teleports
 local TPFrame = Instance.new("Frame", Frame)
 local UICorner = Instance.new("UICorner", TPFrame)
