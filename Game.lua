@@ -32,3 +32,8 @@ InfoLabel.Text = "ID: ".. ID .."   Name: ".. GameName
 InfoLabel.TextSize = 14
 InfoLabel.Font = 4
 InfoLabel.TextColor3 = White
+
+--Functions
+if ID == 1537690962 then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/ProPvp234/ProHub-Roblox-Script/main/BSS%20Script.lua", true))()
+end
