@@ -10,6 +10,7 @@ local GuiFolder = game.CoreGui
 local HubFolder = GuiFolder.ProHub.HUB
 local Player = game.Players.LocalPlayer
 local Frame = GuiFolder.ProHub.HUB.OtherFrame
+local SpeedLoop = false
 --Colors
 local Background = Color3.new(0.20, 0.20, 0.20)
 local DarkBackground = Color3.new(0.15, 0.15, 0.15)
@@ -79,6 +80,16 @@ JumpBox.TextScaled = true
 JumpBox.TextColor3 = White
 JumpBox.Font = 4
 JumpBox.BackgroundColor3 = DarkBackground
+local DestroyMap = Instance.new("TextButton", Frame)
+local UICorner = Instance.new("UICorner", DestroyMap)
+DestroyMap.Position = UDim2.new(0.515, 0,0.852, 0)
+DestroyMap.Size = UDim2.new(0, 173,0, 30)
+DestroyMap.Name = "DestroyMap"
+DestroyMap.Text = "DestroyMap"
+DestroyMap.TextScaled = true
+DestroyMap.TextColor3 = White
+DestroyMap.Font = 4
+DestroyMap.BackgroundColor3 = DarkBackground
 
 
 
@@ -101,4 +112,9 @@ end)
 SetJumpButton.MouseButton1Click:Connect(function()
 	game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = true
 	game.Players.LocalPlayer.Character.Humanoid.JumpPower = JumpBox.Text
+end)
+DestroyMap.MouseButton1Click:Connect(function()
+	for a, b in pairs(game.Workspace:GetChildren()) do
+		b:Destroy()
+	end
 end)
