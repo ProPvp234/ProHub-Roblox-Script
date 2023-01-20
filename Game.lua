@@ -32,8 +32,19 @@ InfoLabel.Text = "ID: ".. ID .."   Name: ".. GameName
 InfoLabel.TextSize = 14
 InfoLabel.Font = 4
 InfoLabel.TextColor3 = White
+local IDGameScripts = Instance.new("Frame", Frame)
+IDGameScripts.Visible = false
+IDGameScripts.Name = "IDGameScripts"
+IDGameScripts.Size = UDim2.new(0, 357,0, 152)
+IDGameScripts.Position = UDim2.new(0, 0,0.201, 0)
+IDGameScripts.BackgroundTransparency = 1
+IDGameScripts.Visible = false
 
 --Functions
 if ID == 1537690962 then
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/ProPvp234/ProHub-Roblox-Script/main/BSS%20Script.lua", true))()
+	print("Bee Swarm Simulator")
+elseif ID == 6284583030 or 10321372166 or 7722306047 then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/ProPvp234/ProHub-Roblox-Script/main/PSX%20Script.txt", true))()
+	print("Pet Simulator X")
 end
