@@ -33,7 +33,6 @@ InfoLabel.TextSize = 14
 InfoLabel.Font = 4
 InfoLabel.TextColor3 = White
 local IDGameScripts = Instance.new("Frame", Frame)
-IDGameScripts.Visible = false
 IDGameScripts.Name = "IDGameScripts"
 IDGameScripts.Size = UDim2.new(0, 357,0, 152)
 IDGameScripts.Position = UDim2.new(0, 0,0.201, 0)
