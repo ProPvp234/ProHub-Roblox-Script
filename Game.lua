@@ -37,6 +37,7 @@ IDGameScripts.Name = "IDGameScripts"
 IDGameScripts.Size = UDim2.new(0, 357,0, 152)
 IDGameScripts.Position = UDim2.new(0, 0,0.201, 0)
 IDGameScripts.BackgroundTransparency = 1
+IDGameScripts.Visible = true
 
 --Functions
 if ID == 1537690962 then
