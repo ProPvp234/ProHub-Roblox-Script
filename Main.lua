@@ -17,5 +17,4 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/ProPvp234/ProHub-Robl
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ProPvp234/ProHub-Roblox-Script/main/Game.lua", true))() --Game
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ProPvp234/ProHub-Roblox-Script/main/Other.lua", true))() --Other
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ProPvp234/ProHub-Roblox-Script/main/Executor.lua", true))() --Executor
---loadstring(game:HttpGet("https://raw.githubusercontent.com/ProPvp234/ProHub-Roblox-Script/main/Logger.lua", true))() --Logger
-loadstring(game:HttpGet("https://pastebin.com/raw/7Sa9im9r", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ProPvp234/ProHub-Roblox-Script/main/Logger.lua", true))() --Logger
