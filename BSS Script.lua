@@ -10,15 +10,19 @@ local GuiFolder = game.CoreGui
 local HubFolder = GuiFolder.ProHub.HUB
 local Player = game.Players.LocalPlayer
 local Character = Player.Character
-local Frame = GuiFolder.ProHub.HUB.GameSriptsFrame
+local Frame = GuiFolder.ProHub.HUB.GameSriptsFrame.IDGameScripts
 --Colors
 local Background = Color3.new(0.20, 0.20, 0.20)
 local DarkBackground = Color3.new(0.15, 0.15, 0.15)
 local White = Color3.new(1, 1, 1)
+--Delete old buttons
+for a, b in pairs(Frame:GetChildren()) do
+	b:Destroy()
+end
 --Teleports
 local TPFrame = Instance.new("Frame", Frame)
 local UICorner = Instance.new("UICorner", TPFrame)
-TPFrame.Position = UDim2.new(0, 0,0.185, 0)
+TPFrame.Position = UDim2.new(0, 0,0, 0)
 TPFrame.Size = UDim2.new(0, 100,0, 155)
 TPFrame.Name = "TPFrame"
 TPFrame.BackgroundColor3 = DarkBackground
