@@ -90,6 +90,16 @@ DestroyMap.TextScaled = true
 DestroyMap.TextColor3 = White
 DestroyMap.Font = 4
 DestroyMap.BackgroundColor3 = DarkBackground
+local Rejoin = Instance.new("TextButton", Frame)
+local UICorner = Instance.new("UICorner", Rejoin)
+Rejoin.Position = UDim2.new(0, 0,0.852, 0)
+Rejoin.Size = UDim2.new(0, 173,0, 30)
+Rejoin.Name = "Rejoin"
+Rejoin.Text = "Rejoin"
+Rejoin.TextScaled = true
+Rejoin.TextColor3 = White
+Rejoin.Font = 4
+Rejoin.BackgroundColor3 = DarkBackground
 
 
 
@@ -117,4 +127,10 @@ DestroyMap.MouseButton1Click:Connect(function()
 	for a, b in pairs(game.Workspace:GetChildren()) do
 		b:Destroy()
 	end
+end)
+Rejoin.MouseButton1Click:Connect(function()
+	local TeleportService = game:GetService("TeleportService")
+	local Place = game.PlaceId
+	local player = game.Players.LocalPlayer
+	TeleportService:Teleport(Place, player)
 end)
