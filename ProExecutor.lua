@@ -89,14 +89,12 @@ local ButtonFrame = Instance.new("Frame", Frame)
 local ExecuteButton = Instance.new("TextButton", ButtonFrame)
 local ClearButton = Instance.new("TextButton", ButtonFrame)
 local FastButton = Instance.new("TextButton", ButtonFrame)
-local ProHubButton = Instance.new("TextButton", ButtonFrame)
 local ReJoinButton = Instance.new("TextButton", ButtonFrame)
 
 local UICorner = Instance.new("UICorner", ReJoinButton)
 local UICorner = Instance.new("UICorner", ExecuteButton)
 local UICorner = Instance.new("UICorner", ClearButton)
 local UICorner = Instance.new("UICorner", FastButton)
-local UICorner = Instance.new("UICorner", ProHubButton)
 
 ButtonFrame.Position = UDim2.new(0.743, 0,0.152, 0)
 ButtonFrame.Size = UDim2.new(0, 120,0, 207)
@@ -137,14 +135,6 @@ ReJoinButton.TextScaled = true
 ReJoinButton.Font = 4
 ReJoinButton.TextColor3 = White
 
-ProHubButton.Position = UDim2.new(0, 0,0.85, 0)
-ProHubButton.Size = UDim2.new(0, 120,0, 30)
-ProHubButton.BackgroundColor3 = DarkBackground
-ProHubButton.Text = "ProHub"
-ProHubButton.Name = "ProHub"
-ProHubButton.TextScaled = true
-ProHubButton.Font = 4
-ProHubButton.TextColor3 = White
 
 --Functions
 HideButton.MouseButton1Click:Connect(function()
@@ -165,9 +155,6 @@ ClearButton.MouseButton1Click:Connect(function()
 end)
 FastButton.MouseButton1Click:Connect(function()
 	loadstring(game:HttpGet(ScriptBox.Text, true))()
-end)
-ProHubButton.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/ProPvp234/ProHub-Roblox-Script/main/Main.lua", true))()
 end)
 ReJoinButton.MouseButton1Click:Connect(function()
 	local TeleportService = game:GetService("TeleportService")
