@@ -6,6 +6,7 @@ local HoneyStat = OldHud.HoneyMeter.Bar.TextLabel.Text
 local PollenStat = OldHud.PollenMeter.Bar.TextLabel.Text
 local PollenSek = OldHud.PollenMeter.Bar.PerSecLabel.Text
 local ColorWhite = Color3.new(255, 255, 255)
+OldHud.Visible = false
 --If Exist newhud delete
 if CoreGui:FindFirstChild("ProHud") then
     CoreGui.ProHud:Destroy()
@@ -14,7 +15,6 @@ end
 local ScreenGui = Instance.new("ScreenGui", CoreGui)
 local Frame = Instance.new("Frame", ScreenGui)
 ScreenGui.Name = "ProHud"
-ScreenGui.Enabled = false
 Frame.Position = UDim2.new(0.35, 0, 0, -36)
 Frame.Size = UDim2.new(0, 474,0, 35)
 Frame.BackgroundColor3 = Color3.fromRGB(74, 74, 74)
