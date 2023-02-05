@@ -3,7 +3,6 @@
 Documentation:
 Reset Character - BeeSwarmSimLib:ResetCharacter()
 Colect Dispensers - BeeSwarmSimLib:CollectDispensers()
-Auto Clicker - BeeSwarmSimLib:AutoClicker(true/false)
 Equip Mask - BeeSwarmSimLib:EquipMask("mask")
 Masks:
 Honey Mask, Fire Mask, Bubble Mask, Demon Mask, Diamond Mask, Gummy Mask
@@ -17,8 +16,6 @@ local Player = game.Players.LocalPlayer
 local Character = Player.Character
 local Humanoid = Character.Humanoid
 local VirtualInputManager = game:GetService("VirtualInputManager")
---Functions Local
-local AutoClicker = false
 --Local Funtions
 function SetUp()
     if game.Workspace:FindFirstChild("CommandoPlatfrom") then
@@ -41,28 +38,6 @@ function SetUp()
     MondoPlatfrom.Transparency = 1
 end
 SetUp()
-function AutoClickerLoop()
-    while AutoClicker == true do
-        VirtualInputManager:SendMouseButtonEvent(500, 500, 0, true, game, 1)
-	VirtualInputManager:SendMouseButtonEvent(500, 500, 0, false, game, 1)
-	wait(0.5)
-    end
-end
-
-
-
-
-function BeeSwarmSimLib:AutoClicker(boolean)
-    if boolean == true then
-        local AutoClicker = true
-        AutoClickerLoop()
-	print("True")
-    else
-        local AutoClicker = false
-        AutoClickerLoop()
-	print("false")
-    end 
-end
 
 function BeeSwarmSimLib:TeleportToField(Field)
     if Field == "Pepper" then
