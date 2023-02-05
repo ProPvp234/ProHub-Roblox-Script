@@ -18,7 +18,7 @@ local Character = Player.Character
 local Humanoid = Character.Humanoid
 local VirtualInputManager = game:GetService("VirtualInputManager")
 --Functions Local
-local AutoClicker = true
+local AutoClicker = false
 --Local Funtions
 function SetUp()
     if game.Workspace:FindFirstChild("CommandoPlatfrom") then
