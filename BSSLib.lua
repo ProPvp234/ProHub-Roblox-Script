@@ -44,8 +44,8 @@ SetUp()
 function AutoClickerLoop()
     while AutoClicker == true do
         VirtualInputManager:SendMouseButtonEvent(500, 500, 0, true, game, 1)
-		VirtualInputManager:SendMouseButtonEvent(500, 500, 0, false, game, 1)
-		wait(0.5)
+	VirtualInputManager:SendMouseButtonEvent(500, 500, 0, false, game, 1)
+	wait(0.5)
     end
 end
 
@@ -56,9 +56,11 @@ function BeeSwarmSimLib:AutoClicker(boolean)
     if boolean == true then
         local AutoClicker = true
         AutoClickerLoop()
+	print("True")
     else
         local AutoClicker = false
         AutoClickerLoop()
+	print("false")
     end 
 end
 
