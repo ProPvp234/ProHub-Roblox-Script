@@ -509,6 +509,7 @@ _G.AutoClicker = true
 _G.AutoDispenser = true
 _G.StumpAutofram = true
 local VirtualInputManager = game:GetService("VirtualInputManager")
+local BSSLib = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ProPvp234/ProHub-Roblox-Script/main/BSSLib.lua"))()
 
 --PlatForm
 if game.Workspace:FindFirstChild("CommandoPlatfrom") then
@@ -541,6 +542,13 @@ function StumpPath()
 	local P2 = Instance.new("Part", pathFolder)
 	local P3 = Instance.new("Part", pathFolder)
 	local P4 = Instance.new("Part", pathFolder)
+	local StumpBackToHiveP1 = Instance.new("Part", pathFolder)
+	local StumpBackToHiveP2 = Instance.new("Part", pathFolder)
+	local StumpBackToHiveP3 = Instance.new("Part", pathFolder)
+	local StumpBackToHiveP4 = Instance.new("Part", pathFolder)
+	local StumpBackToHiveP5 = Instance.new("Part", pathFolder)
+	local StumpBackToHiveP6 = Instance.new("Part", pathFolder)
+	local StumpBackToHiveP7 = Instance.new("Part", pathFolder)
 	P1.Position = Vector3.new(400, 96, -190)
 	P1.Name = "P1"
 	P2.Position = Vector3.new(442, 96, -190)
@@ -549,6 +557,21 @@ function StumpPath()
 	P3.Name = "P3"
 	P4.Position = Vector3.new(400, 96, -156)
 	P4.Name = "P4"
+	StumpBackToHiveP1.Position = Vector3.new(225, 68, -148)
+	StumpBackToHiveP1.Name = "StumpBackToHiveP1"
+	StumpBackToHiveP2.Position = Vector3.new(230, 4, 100)
+	StumpBackToHiveP2.Name = "StumpBackToHiveP2"
+	StumpBackToHiveP3.Position = Vector3.new(19, 4, 95)
+	StumpBackToHiveP3.Name = "StumpBackToHiveP3"
+	StumpBackToHiveP4.Position = Vector3.new(18, 4, 214)
+	StumpBackToHiveP4.Name = "StumpBackToHiveP4"
+	StumpBackToHiveP5.Position = Vector3.new(-111, 5, 215)
+	StumpBackToHiveP5.Name = "StumpBackToHiveP5"
+	StumpBackToHiveP6.Position = Vector3.new(-111, 5, 215)
+	StumpBackToHiveP6.Name = "StumpBackToHiveP6"
+	local HivePos = game.Players.LocalPlayer.SpawnPos.Value.Position
+	StumpBackToHiveP7.Position = Vector3.new(HivePos)
+	StumpBackToHiveP7.Name = "StumpBackToHiveP7"
 	for a, b in pairs(game.Workspace.PathFolder:GetChildren()) do
 		b.Anchored = true
 		b.Transparency = 1
@@ -559,8 +582,8 @@ StumpPath()
 --Functions
 function AutoClicker()
 	while _G.AutoClicker == true do
-		VirtualInputManager:SendMouseButtonEvent(500, 500, 0, true, game, 1)
-		VirtualInputManager:SendMouseButtonEvent(500, 500, 0, false, game, 1)
+		VirtualInputManager:SendMouseButtonEvent(150, 150, 0, true, game, 1)
+		VirtualInputManager:SendMouseButtonEvent(150, 150, 0, false, game, 1)
 		wait(0.3)
 	end
 end
@@ -671,6 +694,27 @@ function StumpFarm()
 		Humanoid.MoveToFinished:wait()
 		Humanoid:MoveTo(game.Workspace.PathFolder.P4.Position)
 		Humanoid.MoveToFinished:wait()
+		local Pollen = Player.CoreStats.Pollen.Value
+		local Cap = Player.CoreStats.Capacity.Value
+		if Pollen == Cap or Pollen > Cap then
+			_G.StumpAutofram = false
+			local HivePos = game.Players.LocalPlayer.SpawnPos.Value.Position
+			Character.HumanoidRootPart.CFrame = CFrame.new(HivePos)
+			wait(1)
+			VirtualInputManager:SendKeyEvent(true, 101, false, game)
+			_G.Converting = true
+			while _G.Converting == true do
+				local Pollen = Player.CoreStats.Pollen.Value
+				local Cap = Player.CoreStats.Capacity.Value
+				if Pollen == 0 then
+					wait(5)
+					_G.Converting = false
+					Character.HumanoidRootPart.CFrame = CFrame.new(420, 96, -175)
+					_G.StumpAutofram = true
+				end
+				wait(0.5)
+			end
+		end
 	end
 end
 --Teleports
