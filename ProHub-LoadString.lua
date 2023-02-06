@@ -508,6 +508,8 @@ if _G.PlaceId == 1537690962 or _G.PlaceId == 11779843158 then
 _G.AutoClicker = true
 _G.AutoDispenser = true
 _G.StumpAutofram = true
+_G.Webhook = true
+_G.WebhookLink = nil
 local VirtualInputManager = game:GetService("VirtualInputManager")
 local BSSLib = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ProPvp234/ProHub-Roblox-Script/main/BSSLib.lua"))()
 
@@ -538,40 +540,18 @@ function StumpPath()
 	end
 	local pathFolder = Instance.new("Folder", game.Workspace)
 	pathFolder.Name = "PathFolder"
-	local P1 = Instance.new("Part", pathFolder)
-	local P2 = Instance.new("Part", pathFolder)
-	local P3 = Instance.new("Part", pathFolder)
-	local P4 = Instance.new("Part", pathFolder)
-	local StumpBackToHiveP1 = Instance.new("Part", pathFolder)
-	local StumpBackToHiveP2 = Instance.new("Part", pathFolder)
-	local StumpBackToHiveP3 = Instance.new("Part", pathFolder)
-	local StumpBackToHiveP4 = Instance.new("Part", pathFolder)
-	local StumpBackToHiveP5 = Instance.new("Part", pathFolder)
-	local StumpBackToHiveP6 = Instance.new("Part", pathFolder)
-	local StumpBackToHiveP7 = Instance.new("Part", pathFolder)
-	P1.Position = Vector3.new(400, 96, -190)
-	P1.Name = "P1"
-	P2.Position = Vector3.new(442, 96, -190)
-	P2.Name = "P2"
-	P3.Position = Vector3.new(442, 96, -156)
-	P3.Name = "P3"
-	P4.Position = Vector3.new(400, 96, -156)
-	P4.Name = "P4"
-	StumpBackToHiveP1.Position = Vector3.new(225, 68, -148)
-	StumpBackToHiveP1.Name = "StumpBackToHiveP1"
-	StumpBackToHiveP2.Position = Vector3.new(230, 4, 100)
-	StumpBackToHiveP2.Name = "StumpBackToHiveP2"
-	StumpBackToHiveP3.Position = Vector3.new(19, 4, 95)
-	StumpBackToHiveP3.Name = "StumpBackToHiveP3"
-	StumpBackToHiveP4.Position = Vector3.new(18, 4, 214)
-	StumpBackToHiveP4.Name = "StumpBackToHiveP4"
-	StumpBackToHiveP5.Position = Vector3.new(-111, 5, 215)
-	StumpBackToHiveP5.Name = "StumpBackToHiveP5"
-	StumpBackToHiveP6.Position = Vector3.new(-111, 5, 215)
-	StumpBackToHiveP6.Name = "StumpBackToHiveP6"
-	local HivePos = game.Players.LocalPlayer.SpawnPos.Value.Position
-	StumpBackToHiveP7.Position = Vector3.new(HivePos)
-	StumpBackToHiveP7.Name = "StumpBackToHiveP7"
+	local StumpP1 = Instance.new("Part", pathFolder)
+	local StumpP2 = Instance.new("Part", pathFolder)
+	local StumpP3 = Instance.new("Part", pathFolder)
+	local StumpP4 = Instance.new("Part", pathFolder)
+	StumpP1.Position = Vector3.new(400, 96, -190)
+	StumpP1.Name = "StumpP1"
+	StumpP2.Position = Vector3.new(442, 96, -190)
+	StumpP2.Name = "StumpP2"
+	StumpP3.Position = Vector3.new(442, 96, -156)
+	StumpP3.Name = "StumpP3"
+	StumpP4.Position = Vector3.new(400, 96, -156)
+	StumpP4.Name = "StumpP4"
 	for a, b in pairs(game.Workspace.PathFolder:GetChildren()) do
 		b.Anchored = true
 		b.Transparency = 1
@@ -686,13 +666,13 @@ function StumpFarm()
 	local Character = Player.Character
 	local Humanoid = Character.Humanoid
 	while _G.StumpAutofram == true do
-		Humanoid:MoveTo(game.Workspace.PathFolder.P1.Position)
+		Humanoid:MoveTo(game.Workspace.PathFolder.StumpP1.Position)
 		Humanoid.MoveToFinished:wait()
-		Humanoid:MoveTo(game.Workspace.PathFolder.P2.Position)
+		Humanoid:MoveTo(game.Workspace.PathFolder.StumpP2.Position)
 		Humanoid.MoveToFinished:wait()
-		Humanoid:MoveTo(game.Workspace.PathFolder.P3.Position)
+		Humanoid:MoveTo(game.Workspace.PathFolder.StumpP3.Position)
 		Humanoid.MoveToFinished:wait()
-		Humanoid:MoveTo(game.Workspace.PathFolder.P4.Position)
+		Humanoid:MoveTo(game.Workspace.PathFolder.StumpP4.Position)
 		Humanoid.MoveToFinished:wait()
 		local Pollen = Player.CoreStats.Pollen.Value
 		local Cap = Player.CoreStats.Capacity.Value
